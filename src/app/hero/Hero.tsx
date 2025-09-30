@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-3xl">
         <Badge
           variant="secondary"
-          className="bg-berkley-blue hover:bg-light-blue text-light-grey rounded-full py-1 border-border"
+          className="bg-berkley-blue hover:bg-red-600 text-light-grey rounded-full py-1 border-border"
           asChild
         >
           <Link href="#">
