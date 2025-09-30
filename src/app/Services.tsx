@@ -1,78 +1,75 @@
 import {
-    Blocks,
-    Bot,
-    ChartPie,
-    Film,
-    MessageCircle,
-    Settings2,
+  Battery,
+  Car,
+  Gauge,
+  ShieldCheck,
+  ThermometerSnowflake,
+  Wrench,
 } from "lucide-react";
-  
-  const features = [
-    {
-      icon: Settings2,
-      title: "Customizable Layouts",
-      description:
-        "Design your space with drag-and-drop simplicity—create grids, lists, or galleries in seconds.",
-    },
-    {
-      icon: Blocks,
-      title: "Interactive Widgets",
-      description:
-        "Embed polls, quizzes, or forms to keep your audience engaged.",
-    },
-    {
-      icon: Bot,
-      title: "AI-Powered Tools",
-      description:
-        "Generate summaries, auto-format content, or translate into multiple languages seamlessly.",
-    },
-    {
-      icon: Film,
-      title: "Media Integrations",
-      description:
-        "Connect with Spotify, Instagram, or your own media library for dynamic visuals and sound.",
-    },
-    {
-      icon: ChartPie,
-      title: "Advanced Analytics",
-      description:
-        "Track engagement, clicks, and user activity with intuitive charts and reports.",
-    },
-    {
-      icon: MessageCircle,
-      title: "Seamless Collaboration",
-      description:
-        "Comment, tag, and assign tasks directly within your documents.",
-    },
-  ];
-  
-  const Features01Page = () => {
-    return (
-      <div className="min-h-screen flex items-center justify-center py-12">
-        <div>
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-center">
-            Unleash Your Creativity
-          </h2>
-          <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-(--breakpoint-lg) mx-auto px-6">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="flex flex-col border rounded-xl py-6 px-5"
-              >
-                <div className="mb-4 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
-                  <feature.icon className="size-5" />
-                </div>
-                <span className="text-lg font-semibold">{feature.title}</span>
-                <p className="mt-1 text-foreground/80 text-[15px]">
-                  {feature.description}
-                </p>
+
+const features = [
+  {
+    icon: Wrench,
+    title: "Tagliando Completo",
+    description:
+      "Manutenzione periodica per mantenere la tua auto sempre efficiente e sicura.",
+  },
+  {
+    icon: ThermometerSnowflake,
+    title: "Ricarica Aria Condizionata",
+    description:
+      "Controllo e ricarica del climatizzatore per viaggi confortevoli in ogni stagione.",
+  },
+  {
+    icon: Gauge,
+    title: "Diagnosi Computerizzata",
+    description:
+      "Analisi elettronica avanzata per individuare rapidamente guasti e anomalie.",
+  },
+  {
+    icon: Battery,
+    title: "Batteria e Impianto Elettrico",
+    description:
+      "Sostituzione batterie e riparazione impianti elettrici per garantire affidabilità.",
+  },
+  {
+    icon: Car,
+    title: "Meccanica Generale",
+    description:
+      "Riparazioni su motore, freni, sospensioni e trasmissioni per ogni tipo di veicolo.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Revisione e Sicurezza",
+    description:
+      "Preparazione e assistenza alla revisione per viaggiare senza pensieri.",
+  },
+];
+
+export default function Services() {
+  return (
+    <div className="min-h-screen flex items-center justify-center py-12">
+      <div>
+        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-center">
+          I Nostri Servizi
+        </h2>
+        <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-(--breakpoint-lg) mx-auto px-6">
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="flex flex-col border rounded-xl py-6 px-5"
+            >
+              <div className="mb-4 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
+                <feature.icon className="size-5" />
               </div>
-            ))}
-          </div>
+              <span className="text-lg font-semibold">{feature.title}</span>
+              <p className="mt-1 text-foreground/80 text-[15px]">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-    );
-  };
-  
-  export default Features01Page;
-  
+    </div>
+  );
+}
