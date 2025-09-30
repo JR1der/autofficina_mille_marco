@@ -27,7 +27,7 @@ export default function ContactUs() {
               className="font-medium"
               href="mailto:akashmoradiya3444@gmail.com"
             >
-              akashmoradiya3444@gmail.com
+              email@gmail.com
             </Link>
           </div>
           <div className="border border-dashed bg-primary/1 p-6 pb-10 rounded-lg">
@@ -39,8 +39,8 @@ export default function ContactUs() {
               Contatta il nostro team direttamente su WhatsApp.
             </p>
             <Link
-              className="inline-block bg-green-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-green-700 transition"
-              href="https://wa.me/15550000000"
+              className="text-center inline-block bg-green-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-green-700 w-full"
+              href="https://wa.me/397751520501"
               target="_blank"
             >
               Invia un messaggio
@@ -59,7 +59,7 @@ export default function ContactUs() {
               href="https://map.google.com"
               target="_blank"
             >
-              100 Smith Street Collingwood <br /> VIC 3066 AU
+              Via Merago, 23 <br /> 03010 SERRONE (Fr)
             </Link>
           </div>
           <div className="border border-dashed bg-primary/1 p-6 pb-10 rounded-lg">
@@ -72,9 +72,9 @@ export default function ContactUs() {
             </p>
             <Link
               className="font-medium"
-              href="tel:akashmoradiya3444@gmail.com"
+              href="tel:397751520501"
             >
-              +1 (555) 000-0000
+              +39-775-152-0501
             </Link>
           </div>
         </div>
