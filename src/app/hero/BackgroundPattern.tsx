@@ -32,17 +32,17 @@ export default function BackgroundPattern({
         cy={1}
         cr={1}
         className={cn(
-          "mask-[radial-gradient(ellipse,rgba(0,0,0,0.3)_30%,black_50%)]",
-          "fill-slate-700"
+          "mask-[radial-gradient(ellipse,rgba(0,0,0,0.3)_35%,black_50%)]",
+          "fill-light-grey"
         )}
       />
 
       {/* Particles */}
       <Particles
         className="absolute inset-0"
-        quantity={100}
+        quantity={200}
         ease={80}
-        color="#000"
+        color="#2d8fff"
         refresh
       />
     </div>
