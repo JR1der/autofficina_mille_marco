@@ -83,7 +83,6 @@ export default function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.436300283082!2d13.098211!3d41.8306422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f8bc7744fa8cb%3A0xb887d5636e8c9e11!2sAutofficina%20Mille%20Marco!5e1!3m2!1suk!2sit!4v1759263971107!5m2!1suk!2sit"
             width="100%"
             height="100%"
-            allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
