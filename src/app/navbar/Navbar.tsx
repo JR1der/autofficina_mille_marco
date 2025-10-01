@@ -14,6 +14,7 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // mobile menu state
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -35,6 +36,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", controlNavbar);
   }, [lastScrollY]);
 
+  const closeMenu = () => {
+    setIsVisible(false); // instantly hide navbar
+    setIsMenuOpen(false); // close mobile sheet
+  };
+
   const scrollToSection = (sectionId: string) => (event: React.MouseEvent) => {
     event.preventDefault();
     const element = document.getElementById(sectionId);
@@ -42,6 +48,7 @@ export default function Navbar() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", `#${sectionId}`);
     }
+    closeMenu(); // close everything when navigating
   };
 
   return (
@@ -58,7 +65,7 @@ export default function Navbar() {
         <Image src="/logo.png" alt="Agg Logo" width={50} height={50} />
 
         {/* Desktop Menu */}
-        <NavMenu className="hidden md:block" />
+        <NavMenu className="hidden md:block" onNavigate={scrollToSection} />
 
         <div className="flex items-center gap-3">
           <Button
@@ -74,7 +81,15 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <NavigationSheet />
+            <NavigationSheet
+              isOpen={isMenuOpen}
+              onOpenChange={setIsMenuOpen}
+              onNavigate={(sectionId) => (e) => {
+                scrollToSection(sectionId)(e);
+                setIsMenuOpen(false); // close the sheet instantly
+                setIsVisible(false); // hide navbar instantly
+              }}
+            />
           </div>
         </div>
       </div>

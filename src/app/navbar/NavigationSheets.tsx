@@ -1,21 +1,37 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import Image from "next/image";
 import { NavMenu } from "./NavMenu";
 
-export const NavigationSheet = () => {
+interface NavigationSheetProps {
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+  onNavigate: (sectionId: string) => (e: React.MouseEvent) => void;
+}
+
+export function NavigationSheet({
+  isOpen,
+  onOpenChange,
+  onNavigate,
+}: NavigationSheetProps) {
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={onOpenChange}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Menu />
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-10 w-10 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent className="px-6 py-3">
-        <Image src="/logo.png" alt="Agg Logo" width={50} height={50} />
-        <NavMenu orientation="vertical" className="mt-6 [&>div]:h-full" />
+
+      <SheetContent side="right" className="p-4">
+        <NavMenu orientation="vertical" onNavigate={onNavigate} />
       </SheetContent>
     </Sheet>
   );
-};
+}
