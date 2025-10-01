@@ -15,7 +15,7 @@ export default function BackgroundPattern({
     <div className={cn("absolute inset-0 overflow-hidden", className)}>
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center blur-sm"
+        className="absolute inset-0 bg-cover bg-center blur-xs"
         style={{
           backgroundImage: "url('/garage_bmw.jpeg')",
         }}

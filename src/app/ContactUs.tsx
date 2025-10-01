@@ -78,8 +78,8 @@ export default function ContactUs() {
               icon: MailIcon,
               title: "Email",
               description: "Il nostro team è qui per aiutarti.",
-              link: "mailto:akashmoradiya3444@gmail.com",
-              linkText: "email@gmail.com",
+              link: "mailto:marcomille@yahoo.it",
+              linkText: "marcomille@yahoo.it",
             },
             {
               icon: MessageCircle,
