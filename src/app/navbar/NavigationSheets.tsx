@@ -1,7 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { NavMenu } from "./NavMenu";
 
@@ -30,6 +36,10 @@ export function NavigationSheet({
       </SheetTrigger>
 
       <SheetContent side="right" className="p-4">
+        <SheetTitle className="sr-only">Main navigation</SheetTitle>
+        <SheetDescription className="sr-only">
+          Open the menu to navigate to different sections of the page
+        </SheetDescription>
         <NavMenu orientation="vertical" onNavigate={onNavigate} />
       </SheetContent>
     </Sheet>

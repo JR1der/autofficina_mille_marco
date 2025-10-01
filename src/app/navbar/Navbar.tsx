@@ -48,7 +48,7 @@ export default function Navbar() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", `#${sectionId}`);
     }
-    closeMenu(); // close everything when navigating
+    closeMenu();
   };
 
   return (
@@ -69,13 +69,13 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Button
-            onClick={scrollToSection("about-us")}
+            onClick={scrollToSection("contact-us")}
             variant="outline"
             className="cursor-pointer bg-berkley-blue hover:bg-light-blue hidden sm:inline-flex"
           >
-            Comincia
+            Contattaci
           </Button>
-          <Button className="bg-green-600 text-white hover:bg-green-400 transition">
+          <Button className="cursor-pointer bg-green-600 text-white hover:bg-green-400 transition">
             WhatsApp
           </Button>
 

@@ -63,7 +63,10 @@ export default function Footer() {
               <Link href="tel:+39" target="_blank">
                 <PhoneIcon className="h-5 w-5" />
               </Link>
-              <Link href="#" target="_blank">
+              <Link
+                href="https://maps.app.goo.gl/xPH91GBvj35njr7r6"
+                target="_blank"
+              >
                 <MapPin className="h-5 w-5" />
               </Link>
               <Link href="#" target="_blank">
