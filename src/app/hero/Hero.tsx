@@ -1,12 +1,21 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowBigDown, ArrowUpRight, MessageCircleMore } from "lucide-react";
 import Link from "next/link";
+import { useRef } from "react";
 import BackgroundPattern from "./BackgroundPattern";
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-6">
+    <section
+      id="hero"
+      ref={sectionRef}
+      className="relative min-h-screen flex items-center justify-center px-6"
+    >
       <BackgroundPattern className="absolute inset-0 z-0" />
 
       <div className="relative z-10 text-center max-w-3xl">
@@ -44,6 +53,6 @@ export default function Hero() {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

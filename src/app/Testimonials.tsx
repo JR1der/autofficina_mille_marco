@@ -1,6 +1,8 @@
+"use client";
+
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { StarIcon } from "lucide-react";
-
+import { useRef } from "react";
 const testimonials = [
   {
     id: 1,
@@ -45,8 +47,14 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <div className="min-h-screen flex justify-center items-center py-12 px-6">
+    <section
+      id="testimonials"
+      ref={sectionRef}
+      className="min-h-screen flex justify-center items-center py-12 px-6"
+    >
       <div>
         <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
           Amati dai Nostri Clienti
@@ -86,6 +94,6 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

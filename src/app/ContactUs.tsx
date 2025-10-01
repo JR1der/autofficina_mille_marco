@@ -1,9 +1,17 @@
+"use client";
+
 import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function ContactUs() {
+  const sectionRef = useRef<HTMLElement>(null);
   return (
-    <div className="min-h-screen flex items-center justify-center pt-12 md:pt-16 pb-16">
+    <section
+      id="contact-us"
+      ref={sectionRef}
+      className="min-h-screen flex items-center justify-center pt-12 md:pt-16 pb-16"
+    >
       <div className="w-full max-w-(--breakpoint-xl) mx-auto px-6 xl:px-0">
         <b className="text-muted-foreground uppercase font-semibold text-sm">
           Contattaci
@@ -70,10 +78,7 @@ export default function ContactUs() {
             <p className="mt-2.5 mb-4 text-muted-foreground">
               Lun-Sab dalle 9:00 alle 19:00
             </p>
-            <Link
-              className="font-medium"
-              href="tel:397751520501"
-            >
+            <Link className="font-medium" href="tel:397751520501">
               +39-775-152-0501
             </Link>
           </div>
@@ -88,6 +93,6 @@ export default function ContactUs() {
           ></iframe>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

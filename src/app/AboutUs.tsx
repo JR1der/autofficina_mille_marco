@@ -1,15 +1,24 @@
+"use client";
+
 import {
-    GraduationCap,
-    Handshake,
-    History,
-    KeySquare,
-    ShieldCheck,
-    Wrench,
+  GraduationCap,
+  Handshake,
+  History,
+  KeySquare,
+  ShieldCheck,
+  Wrench,
 } from "lucide-react";
+import { useRef } from "react";
 
 export default function AboutUs() {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <section
+      id="about-us"
+      ref={sectionRef}
+      className="min-h-screen flex items-center justify-center"
+    >
       <div className="w-full max-w-(--breakpoint-lg) mx-auto py-12 px-6">
         <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-13 font-semibold tracking-tight text-center">
           La Nostra Officina: <br />
@@ -152,6 +161,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

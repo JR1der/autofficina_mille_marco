@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Battery,
   Car,
@@ -6,6 +8,7 @@ import {
   ThermometerSnowflake,
   Wrench,
 } from "lucide-react";
+import { useRef } from "react";
 
 const features = [
   {
@@ -47,8 +50,14 @@ const features = [
 ];
 
 export default function Services() {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <div className="min-h-screen flex items-center justify-center py-12">
+    <section
+      id="services"
+      ref={sectionRef}
+      className="min-h-screen flex items-center justify-center py-12"
+    >
       <div>
         <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-center">
           I Nostri Servizi
@@ -70,6 +79,6 @@ export default function Services() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
