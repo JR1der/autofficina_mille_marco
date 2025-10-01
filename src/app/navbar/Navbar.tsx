@@ -62,7 +62,14 @@ export default function Navbar() {
       )}
     >
       <div className="h-16 flex items-center justify-between max-w-(--breakpoint-xl) mx-auto px-4 sm:px-6 lg:px-8 border-b">
-        <Image src="/logo.png" alt="Agg Logo" width={50} height={50} />
+        <Image
+          src="/logo.png"
+          alt="Agg Logo"
+          onClick={scrollToSection("hero")}
+          className="cursor-pointer hover:scale-110"
+          width={50}
+          height={50}
+        />
 
         {/* Desktop Menu */}
         <NavMenu className="hidden md:block" onNavigate={scrollToSection} />
